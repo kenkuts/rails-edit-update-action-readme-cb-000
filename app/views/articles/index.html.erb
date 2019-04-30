@@ -1,3 +1,5 @@
 <% @articles.each do |article| %>
-  <div><%= article.title %></div>
+  <div><%= link_to article.title, article_path(article) %></div>
 <% end %>
+
+<%= button_to "Create Article", new_article_path, html_options = {:method => :get} %>
